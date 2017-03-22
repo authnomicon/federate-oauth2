@@ -2,7 +2,7 @@
 
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var factory = require('../lib/statestore');
+var factory = require('../app/statestore');
 
 
 describe('statestore', function() {
