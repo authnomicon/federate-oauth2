@@ -1,8 +1,8 @@
-exports = module.exports = function(store) {
+exports = module.exports = function(s) {
   var CommonStateStore = require('../lib/commonstatestore');
   
   
-  var store = new CommonStateStore(store);
+  var store = new CommonStateStore(s);
   return store;
 };
 
