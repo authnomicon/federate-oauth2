@@ -1,5 +1,5 @@
 {
-  "name": "@authnomicon/sso-oauth2",
+  "name": "@authnomicon/federate-oauth2",
   "version": "0.0.0",
   "description": "",
   "author": {
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/authnomicon/nodex-sso-oauth2.git"
+    "url": "git://github.com/authnomicon/federate-oauth2.git"
   },
   "bugs": {
-    "url": "http://github.com/authnomicon/nodex-sso-oauth2/issues"
+    "url": "http://github.com/authnomicon/federate-oauth2/issues"
   },
   "license": "MIT",
   "licenses": [
