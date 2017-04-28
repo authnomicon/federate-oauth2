@@ -1,9 +1,11 @@
+/*
 exports = module.exports = {
   'createprovider': require('./createprovider'),
   'statestore': require('./statestore')
 };
+*/
 
-exports.load = function(id) {
+exports = module.exports = function(id) {
   try {
     return require('./' + id);
   } catch (ex) {
