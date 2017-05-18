@@ -8,7 +8,7 @@ exports = module.exports = function(challengeHandler, responseHandler) {
   return router;
 };
 
-exports['@implements'] = 'http://schemas.authnomicon.org/js/federate/oauth2/http/COTCService';
+exports['@implements'] = 'http://schemas.authnomicon.org/js/oauth2/http/COTCService';
 exports['@require'] = [
   './handlers/cotc/challenge',
   './handlers/cotc/response'
