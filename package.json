@@ -25,11 +25,14 @@
   "assembly": {
     "namespace": "federate/oauth2",
     "components": [
+      "http/cotc",
       "createprovider",
       "statestore"
     ]
   },
   "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
   },
   "devDependencies": {
     "make-node": "^0.3.0",
