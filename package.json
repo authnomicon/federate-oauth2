@@ -28,9 +28,11 @@
       "http/cotc",
       "createprovider",
       "statestore",
-      "verify",
+      "verify"
+    ],
+    "xcomponents": [
       "handlers/return"
-    ]
+    ],
   },
   "dependencies": {
     "ejs": "^2.5.6",

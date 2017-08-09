@@ -9,10 +9,17 @@ exports = module.exports = function(createProvider, authenticator, initialize, l
   }
   
   function authenticateAuthorizationResponse(req, res, next) {
-    authenticator.authenticate(req.locals.provider, { session: false, failWithError: true })(req, res, next);
+    authenticator.authenticate('https://clef.io', { session: false, failWithError: true })(req, res, next);
+    
+    //authenticator.authenticate(req.locals.provider, { session: false, failWithError: true })(req, res, next);
   }
   
   function stashAccount(req, res, next) {
+    console.log('AUTHENTICATED USER!');
+    console.log(req.user)
+    return;
+    
+    
     req.locals.account = req.user;
     delete req.user;
     next();
@@ -35,8 +42,8 @@ exports = module.exports = function(createProvider, authenticator, initialize, l
     initialize(),
     // FIXME: The following invalid, required state name causes an incorrect error in flowstate
     //ceremony.loadState({ name: 'sso/oauth2x', required: true }),
-    loadState('federate-oauth2', { required: true }),
-    loadIdentityProvider,
+    //loadState('federate-oauth2', { required: true }),
+    //loadIdentityProvider,
     authenticateAuthorizationResponse,
     stashAccount,
     authenticate([ 'state', 'anonymous' ]),
