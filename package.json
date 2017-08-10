@@ -26,7 +26,6 @@
     "namespace": "federate/oauth2",
     "components": [
       "http/cotc",
-      "createprovider",
       "verify"
     ],
     "xcomponents": [
