@@ -27,12 +27,12 @@
     "components": [
       "http/cotc",
       "createprovider",
-      "statestore",
       "verify"
     ],
     "xcomponents": [
-      "handlers/return"
-    ],
+      "handlers/return",
+      "statestore"
+    ]
   },
   "dependencies": {
     "ejs": "^2.5.6",
