@@ -25,12 +25,12 @@
   "assembly": {
     "namespace": "federate/oauth2",
     "components": [
-      "http/cotc",
-      "verify"
+      "http/cotc"
     ],
     "xcomponents": [
       "handlers/return",
-      "statestore"
+      "statestore",
+      "verify"
     ]
   },
   "dependencies": {
