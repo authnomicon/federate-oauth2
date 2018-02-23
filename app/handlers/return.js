@@ -1,4 +1,4 @@
-exports = module.exports = function(createProvider, authenticator, initialize, loadState, authenticate, completeTask, failTask) {
+exports = module.exports = function(createProvider, /*authenticator,*/ initialize, loadState, authenticate, completeTask, failTask) {
 
   function loadIdentityProvider(req, res, next) {
     createProvider(req.state, function(err, provider) {
@@ -46,7 +46,7 @@ exports = module.exports = function(createProvider, authenticator, initialize, l
     //loadIdentityProvider,
     authenticateAuthorizationResponse,
     stashAccount,
-    authenticate([ 'state', 'anonymous' ]),
+    //authenticate([ 'state', 'anonymous' ]),
     postProcess,
     completeTask('federate-oauth2'),
     failTask('federate-oauth2')
@@ -56,7 +56,7 @@ exports = module.exports = function(createProvider, authenticator, initialize, l
 
 exports['@require'] = [
   'http://schemas.authnomicon.org/js/sso/oauth2/createProvider',
-  'http://i.bixbyjs.org/http/Authenticator',
+  /*'http://i.bixbyjs.org/http/Authenticator',*/
   'http://i.bixbyjs.org/http/middleware/initialize',
   'http://i.bixbyjs.org/http/middleware/loadState',
   'http://i.bixbyjs.org/http/middleware/authenticate',
